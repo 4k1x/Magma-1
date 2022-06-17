@@ -29,12 +29,12 @@
 +      System.out.println("Starting Magma");
 +      LAUNCH_ARGS = Arrays.asList(args);
 +
-+        if(getJavaVersion() > 8){
++        if(getJavaVersion() < 8){
 +            try {
 +                throw new JavaToNewException();
 +            } catch (JavaToNewException e) {
 +                e.printStackTrace();
-+                System.out.println("Magma Only Support's Java 8");
++                System.out.println("Magma Only Support's > Java 8");
 +                return;
 +            }
 +        }
